@@ -30,3 +30,16 @@ abstract class Section{
     public void display(){}
 }
 
+class Text extends Section{
+    Text(String c){
+        super(c);
+    }
+    public void display(){
+        String[] to_display = this.content.split("###");
+        for(int i=0;i<to_display.length;i++){
+            System.out.println(to_display[i]);
+            System.out.print("\n\n");
+        }
+    }
+}
+
