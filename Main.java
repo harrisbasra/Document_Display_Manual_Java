@@ -43,3 +43,25 @@ class Text extends Section{
     }
 }
 
+class Table extends Section{
+    Table(String c){
+        super(c);
+    }
+
+    @Override
+    public void display() {
+        String[] to_display = this.content.split("\\},\\{");
+
+        to_display[0] = to_display[0].substring(2);
+        to_display[to_display.length-1] = to_display[to_display.length-1].substring(0,to_display[to_display.length-1].length()-2);
+
+        for (int i=0;i<to_display.length;i++){
+            String[] to_displayB = to_display[i].split(",");
+
+            //System.out.println(to_display[i]);
+            System.out.println(to_displayB[0] + "\t" + to_displayB[1] );
+            System.out.print("\n");
+        }
+    }
+}
+
