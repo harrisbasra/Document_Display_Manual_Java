@@ -65,3 +65,13 @@ class Table extends Section{
     }
 }
 
+class HelloWorld {
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        //Text t1 = new Text("ABC###DEF###GHI");
+        Table t1 = new Table("[{wordA,synA},{wordB,synB},{wordC,synC},{wordD,synD}]");
+        Document d1 = new Document("");
+        d1.add(t1);
+        d1.display();
+    }
+}
